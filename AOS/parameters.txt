@@ -1,0 +1,119 @@
+/*
+ * AOS Configuration File
+ *
+ */
+
+/*
+ * COMMON
+ *
+ * // number of times to execute a program, and then calculate the average
+ * times: <NUM>
+ *
+ * // update the database with new insights
+ * updateDatabase: <TRUE|FALSE>
+ *
+ * // path and name of the database
+ * database: <filename>
+ *
+ * // compiler level optimization (or sequence) that will act as baseline
+ * threshold: <CLO>
+ *   - O0
+ *   - O1
+ *   - O2
+ *   - O3
+ *   - < opt1 + opt2 + ... + optn >
+ *   - NONE
+ *
+ * // max sequence length 
+ * max: <NUM>
+ * 
+ * // min sequence length 
+ * min: <NUM>
+ *
+ * // An optimization appears only once
+ * onlyOnce: <TRUE|FALSE>
+ *
+ * // region of interest
+ * roi: <NUM>
+ *
+ */
+
+
+/*
+ * SECTION 1: Iterative compilation
+ *
+ * // Iterative compilation algorithm
+ * strategy: <STR(<parameter1,parameter2,...>)>
+ *   - (GAT) Genetic Algorithm with tournament 
+ *           parameters:
+ *             - G=<NUM> - Generations
+ *             - ...
+ *   - (GAR) Genetic Algorithm with rank
+ *   - (COE) Combined Elimination
+ *   - (ITE) Iterative Elimination
+ *   - (BTE) Batch Elimination
+ *   - (IBE) Improved Batch Elimination
+ *   - (SMA) Simulated Anneling
+ *   - (RND) Random
+ *
+ * // The goal (compile for?)
+ * objective: <OBJ> [ + <OBJ> ]
+ *   - runtime
+ *   - size
+ *   - energy
+ *
+ *   You can use only one or: obj1 + ... + ...
+ *
+ * // create a database ??????? PRECISA?????
+ * createDatabase: <TRUE|FALSE>
+ *
+ * // create a final report
+ * report: <RPT>
+ *   - (SMP) Simple
+ *   - (DTL) Detailed
+ *   - (NONE) no report
+ *
+ * // use iterative compilation as a training phase
+ * training: <TRUE|FALSE>
+ *
+ * // the training programs
+ * trainingPrograms: <PROG1>, <PROG2>, ... <PROGN>
+ *
+ */
+
+/*
+ * SECTION 2: Machine Learning
+ *
+ * // Machine learning strategy
+ * strategy: <STR>
+ *   - (CBR) Case-based reasoning
+ *   - (DPL) Deep learning
+ *   - (RFL) Reinforcement learning
+ *   - (LTL) Long-term learning
+ *
+ * // Strategy to represent regions (Case-based reasoning)
+ * characterization: <CHR>
+ *   - (DNA) DNA-based approach (only the OpenISA instructions)
+ *   - (DND) DNA-based approach (OpenISA instructions + data type) ????
+ *   - (FLL) The complete region
+ *
+ * // Strategy to find similar regions( Case-based reasoning)
+ * similarity: <SML>
+ *   - (NaW) Needleman-Wunsch algoritm
+ *   - (CMP) Compress
+ *
+ * // Strategy to retrieve sequences (Case-based reasoning)
+ *
+ * // Fabrı́cio Filho J. et al. 
+ * // Yet Another Intelligent Code-generation System: A Flexible and Low-cost Solution. 
+ * // JOURNAL OF COMPUTER SCIENCE AND TECHNOLOGY
+ *
+ * retrieving: <RTR>
+ *   - ELITE
+ *   - JUST
+ *   - NEARLY
+ *
+ * // Invoke an iterative compilation strategy in a second round
+ * invokeIC: <TRUE|FALSE>
+ *
+ */
